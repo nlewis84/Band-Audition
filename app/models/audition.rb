@@ -1,0 +1,2 @@
+class Audition < ApplicationRecord
+end
