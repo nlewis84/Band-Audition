@@ -62,8 +62,8 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bcrypt (3.1.16)
     bindex (0.8.1)
-    bond (0.5.1)
     bootsnap (1.7.2)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -102,8 +102,6 @@ GEM
     mini_mime (1.0.2)
     minitest (5.14.3)
     msgpack (1.4.2)
-    mustermann (1.1.1)
-      ruby2_keywords (~> 0.0.1)
     nio4r (2.5.5)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
@@ -114,8 +112,6 @@ GEM
     rack (2.2.3)
     rack-mini-profiler (2.3.1)
       rack (>= 1.2.0)
-    rack-protection (2.1.0)
-      rack
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -151,15 +147,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.0.3)
-    ripl (0.7.1)
-      bond (~> 0.5.1)
-    ripl-multi_line (0.3.1)
-      ripl (>= 0.3.6)
-    ripl-rack (0.2.0)
-      rack (>= 1.0)
-      rack-test (>= 0.5)
-      ripl (>= 0.3.5)
-    ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -175,11 +162,6 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (2.3.1)
-    sinatra (2.1.0)
-      mustermann (~> 1.0)
-      rack (~> 2.2)
-      rack-protection (= 2.1.0)
-      tilt (~> 2.0)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -194,11 +176,6 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tux (0.3.0)
-      ripl (>= 0.3.5)
-      ripl-multi_line (>= 0.2.4)
-      ripl-rack (>= 0.2.0)
-      sinatra (>= 1.2.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     web-console (4.1.0)
@@ -226,6 +203,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
@@ -239,7 +217,6 @@ DEPENDENCIES
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
-  tux (~> 0.3.0)
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
