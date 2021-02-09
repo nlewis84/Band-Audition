@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :instruments
   resources :players
   resources :audition_users
   resources :auditions
