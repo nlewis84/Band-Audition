@@ -1,0 +1,11 @@
+<h1>Show Player</h1>
+
+Name: <%= @player.first_name %> <%= @player.last_name %><br>
+Virtual: <%= !!@player.virtual ? "Yes" : "No" %><br>
+Comments: <%= @player.comment %><br>
+First Choice: <%= @player.first_choice %><br>
+Second Choice: <%= @player.second_choice %><br>
+Third Choice: <%= @player.third_choice %><br>
+
+Audition: <%= link_to "#{@player.audition.school} - #{@player.audition.year.strftime("%Y")}", audition_path(@player.audition) %><br>
+Instrument: <%= @player.instrument.name %>

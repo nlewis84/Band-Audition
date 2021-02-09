@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BandAudition</title>
+    <title>Band Audition</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,8 @@
 
   <div>
     <%= link_to "Log Out", logout_path, method: :delete %>
+    <%= link_to "New Audition", new_audition_path %>
+    <%= link_to "New Player", new_player_path %>
   </div>
 
   <body>

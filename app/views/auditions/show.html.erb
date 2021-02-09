@@ -1,0 +1,12 @@
+<h1>Show Audition</h1>
+
+<% @audition.instruments.each do |instrument| %>
+    <div>
+    <%= instrument.name %> - <%= instrument.available_spots - instrument.players.count %> available
+    <% instrument.players.each do |player| %>
+        <div>
+        <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
+        </div>
+    <% end %>
+    </div>
+<% end %>
