@@ -5,6 +5,8 @@ class Audition < ApplicationRecord
     has_many :instruments, through: :audition_instruments
     has_many :players
 
+    validates :school, presence: true
+    validates :year, presence: true
     
     before_save do
         string_length = 6

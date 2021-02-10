@@ -24,8 +24,8 @@ class AuditionsController < ApplicationController
     end
 
     def join
-        @audition = Audition.new
-    end
+        @audition = current_user.auditions.new(audition_params)
+     end
 
     def update
         binding.pry
