@@ -11,7 +11,7 @@
   </head>
 
   <div>
-    <% if session[:user_id] %>
+    <% if current_user %>
       <%= link_to "Log Out", logout_path, method: :delete %>
       <%= link_to "Join Audition", join_path %>
       <%= link_to "New Audition", new_audition_path %>
