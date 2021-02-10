@@ -10,4 +10,8 @@ class Audition < ApplicationRecord
         self.code = rand(36**string_length).to_s(36)
     end
     
+    def school_with_year
+        "#{self.school} - #{self.year.strftime("%Y")}"
+    end
+
 end

@@ -2,7 +2,7 @@
 
 <% @audition.instruments.each do |instrument| %>
     <div>
-    <%= instrument.name %> - <%= instrument.available_spots - instrument.players.count %> available
+    <%= instrument.name %> - <%= instrument.available_spots %> available
     <% instrument.players.each do |player| %>
         <div>
         <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>

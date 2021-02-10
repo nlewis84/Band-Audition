@@ -1,0 +1,14 @@
+<h1>New Instrument</h1>
+
+<%= form_for @instrument do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :available_spots %>
+    <%= f.number_field :available_spots %>
+    
+    <%= f.collection_select :audition_id, User.find_by(id: session[:user_id]).auditions, :id, :school_with_year %>
+
+    <%= f.submit "Create Instrument" %>
+
+<% end %>
