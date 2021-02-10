@@ -7,10 +7,16 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
 
+
+  resources :users, only: [:show] do
+    resources :auditions, only: [:show, :index]
+  end
+
+  resources :auditions, only: [:index, :show, :new, :createa, :edit, :update]
+
   resources :instruments
   resources :players
   resources :audition_users
-  resources :auditions
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

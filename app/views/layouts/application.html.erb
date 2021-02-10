@@ -15,7 +15,7 @@
       <%= link_to "Log Out", logout_path, method: :delete %>
       <%= link_to "New Audition", new_audition_path %>
       <%= link_to "New Player", new_player_path %>
-      <%= link_to "Auditions", user_path(current_user) %>
+      <%= link_to "Auditions", user_auditions_path(current_user) %>
     <% end %>
   </div>
 
