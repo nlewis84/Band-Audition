@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    skip_before_action :has_access, only: [:new, :create]
 
     def new
         @user = User.new

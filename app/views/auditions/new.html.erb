@@ -1,1 +1,13 @@
 <h1>Make a new audition</h1>
+
+<%= form_for @audition do |f| %>
+    <div>
+        <%= f.label :school %>
+        <%= f.text_field :school %>
+    </div>
+    <div>
+        <%= f.label :year %>
+        <%= f.date_field :year %>
+    </div>
+    <%= f.submit %>
+<% end %>

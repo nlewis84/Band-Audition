@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+    skip_before_action :has_access, only: [:new, :create, :welcome]
+
     def welcome
     end
 
