@@ -1,0 +1,9 @@
+Join Audition
+
+<%= form_for @audition, url: '/join' do |f| %>
+    <div>
+        <%= f.label :code %>
+        <%= f.text_field :code %>
+    </div>
+    <%= f.submit "Join Audition" %>
+<% end %>

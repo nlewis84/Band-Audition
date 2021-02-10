@@ -23,6 +23,22 @@ class AuditionsController < ApplicationController
         redirect_to audition_path(@audition)      
     end
 
+    def join
+        @audition = Audition.new
+    end
+
+    def update
+        binding.pry
+        if @audition = Audition.find_by(code: params[:audition][:code])
+            if !current_user.auditions.include?(@audition)
+                current_user.auditions << @audition
+            end
+        else
+            flash[:error] = "Sorry, join code was incorrect. Please try again."
+            redirect_to join_path
+        end
+    end
+
     private
 
     def audition_params
