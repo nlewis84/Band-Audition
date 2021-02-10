@@ -1,4 +1,7 @@
 <h1>Show Audition</h1>
+<p>Audition Code: <%= @audition.code %></p>
+
+<div>
 <% @audition.instruments.each do |instrument| %>
     <div>
     <%= instrument.name %> - <%= instrument.remaining_spots %> available
@@ -9,3 +12,4 @@
     <% end %>
     </div>
 <% end %>
+</div>
