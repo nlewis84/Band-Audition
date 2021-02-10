@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_09_045524) do
+ActiveRecord::Schema.define(version: 2021_02_10_171342) do
+
+  create_table "audition_instruments", force: :cascade do |t|
+    t.integer "audition_id", null: false
+    t.integer "instrument_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["audition_id"], name: "index_audition_instruments_on_audition_id"
+    t.index ["instrument_id"], name: "index_audition_instruments_on_instrument_id"
+  end
 
   create_table "audition_users", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -32,10 +41,8 @@ ActiveRecord::Schema.define(version: 2021_02_09_045524) do
   create_table "instruments", force: :cascade do |t|
     t.string "name"
     t.integer "available_spots"
-    t.integer "audition_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["audition_id"], name: "index_instruments_on_audition_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -63,9 +70,10 @@ ActiveRecord::Schema.define(version: 2021_02_09_045524) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "audition_instruments", "auditions"
+  add_foreign_key "audition_instruments", "instruments"
   add_foreign_key "audition_users", "auditions"
   add_foreign_key "audition_users", "users"
-  add_foreign_key "instruments", "auditions"
   add_foreign_key "players", "auditions"
   add_foreign_key "players", "instruments"
 end

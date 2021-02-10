@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :audition_instruments
   get '/' => 'sessions#welcome'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
     resources :auditions, only: [:show, :index]
   end
 
-  resources :auditions, only: [:index, :show, :new, :createa, :edit, :update]
+  resources :auditions, only: [:index, :show, :new, :create, :edit, :update]
 
   resources :instruments
   resources :players

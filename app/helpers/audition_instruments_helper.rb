@@ -1,0 +1,2 @@
+module AuditionInstrumentsHelper
+end

@@ -5,7 +5,7 @@ class InstrumentsController < ApplicationController
 
     def create
         @instrument = Instrument.create(instrument_params)  
-        @audition = Audition.find_by(id: params[:instrument][:audition_id])
+        @audition = Audition.find_by(id: params[:instrument][:auditions])
         @audition.instruments << @instrument
         redirect_to audition_path(@audition)      
     end
