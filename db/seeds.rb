@@ -22,16 +22,16 @@ euphonium = Instrument.create(name: "Euphonium", available_spots: 8)
 trombone = Instrument.create(name: "Trombone", available_spots: 8)
 tuba = Instrument.create(name: "Tuba", available_spots: 8)
 percussion = Instrument.create(name: "Percussion", available_spots: 8)
-flute.audition = hs
-clarinet.audition = hs
-oboe.audition = hs
-bassoon.audition = hs
-trumpet.audition = hs
-horn.audition = hs
-euphonium.audition = hs
-trombone.audition = hs
-tuba.audition = hs
-percussion.audition = hs
+hs.instruments << flute
+hs.instruments << clarinet
+hs.instruments << oboe
+hs.instruments << bassoon
+hs.instruments << trumpet
+hs.instruments << horn
+hs.instruments << euphonium
+hs.instruments << trombone
+hs.instruments << tuba
+hs.instruments << percussion
 player1 = Player.create(first_name: "John", last_name: "Smith", virtual: false, comment: "no comments", first_choice: "Flute", second_choice: "Sax", third_choice: "Trumpet")
 player1.instrument = flute
 player1.audition = hs

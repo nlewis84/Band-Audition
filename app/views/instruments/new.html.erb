@@ -8,7 +8,7 @@
     <%= f.label :available_spots %>
     <%= f.number_field :available_spots %>
     
-    <%= f.collection_select :auditions, Audition.all, :id, :school_with_year %>
+    <%= f.collection_select :auditions, User.find_by(id: session[:user_id]).auditions, :id, :school_with_year %>
 
     <%= f.submit "Create Instrument" %>
 
