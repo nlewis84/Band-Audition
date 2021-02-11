@@ -1,4 +1,5 @@
 class InstrumentsController < ApplicationController
+    
     def new
         @instrument = Instrument.new
     end

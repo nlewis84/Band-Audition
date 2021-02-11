@@ -1,2 +1,0 @@
-class AuditionInstrumentsController < ApplicationController
-end

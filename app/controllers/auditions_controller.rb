@@ -1,5 +1,4 @@
 class AuditionsController < ApplicationController
-    skip_before_action :has_access, only: [:new, :create]
 
     def index
         if params[:user_id]
