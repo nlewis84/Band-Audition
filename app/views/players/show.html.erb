@@ -9,3 +9,9 @@ Third Choice: <%= @player.third_choice %><br>
 
 Audition: <%= link_to "#{@player.audition.school} - #{@player.audition.year.strftime("%Y")}", user_audition_path(current_user, @player.audition) %><br>
 Instrument: <%= @player.instrument.name %>
+<div>
+    <%= button_to "Edit Player", edit_audition_player_path(@player) %>
+</div>
+<div>
+    <%= button_to "Delete Player", audition_player_path(@player), method: :delete %>
+</div>

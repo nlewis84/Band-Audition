@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   end
 
   resources :auditions, only: [:new] do
-    resources :players, only: [:new, :create, :show]
+    resources :players, only: [:new, :create, :show, :edit, :update, :destroy]
   end
  
   resources :players, only: [:new]
