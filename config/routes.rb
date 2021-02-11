@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :audition_instruments
   get '/' => 'sessions#welcome'
   get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+  get '/auth/facebook/callback' => 'sessions#create'
+  #Old Login
+  #post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'

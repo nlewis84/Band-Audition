@@ -5,13 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-nathan = User.create(username: "nathan", password: "drums", first_name: "Nathan", last_name: "Lewis")
-marshall = User.create(username: "marshall", password: "drums", first_name: "Marshall", last_name: "Lewis")
-katie = User.create(username: "katie", password: "drums", first_name: "Katie", last_name: "Lewis")
+# nathan = User.create(username: "nathan", password: "drums", first_name: "Nathan", last_name: "Lewis")
+# marshall = User.create(username: "marshall", password: "drums", first_name: "Marshall", last_name: "Lewis")
+# katie = User.create(username: "katie", password: "drums", first_name: "Katie", last_name: "Lewis")
 hs = Audition.create(school: "High School", year: DateTime.new(2021))
-nathan.auditions << hs
-marshall.auditions << hs
-katie.auditions << hs
+User.first.auditions << hs
+# marshall.auditions << hs
+# katie.auditions << hs
 flute = Instrument.create(name: "Flute", available_spots: 8)
 clarinet = Instrument.create(name: "Clarinet", available_spots: 8)
 oboe = Instrument.create(name: "Oboe", available_spots: 8)
