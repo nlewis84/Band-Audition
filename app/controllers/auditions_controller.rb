@@ -14,6 +14,11 @@ class AuditionsController < ApplicationController
         11.times { @audition.instruments.build }
     end
 
+    def edit
+        @audition = Audition.find(params[:id])
+        4.times { @audition.instruments.build }
+    end
+
     def show
         if params[:user_id]
             @user = User.find_by(id: params[:user_id])
@@ -34,26 +39,16 @@ class AuditionsController < ApplicationController
         redirect_to user_audition_path(current_user, @audition)      
     end
 
-    def join
-        @audition = current_user.auditions.new(audition_params)
-     end
-
     def update
-        binding.pry
-        if @audition = Audition.find_by(code: params[:audition][:code])
-            if !current_user.auditions.include?(@audition)
-                current_user.auditions << @audition
-            end
-        else
-            flash[:error] = "Sorry, join code was incorrect. Please try again."
-            redirect_to join_path
-        end
+        @audition = Audition.find(params[:id])
+        @audition.update(audition_params)
+        redirect_to user_audition_path(current_user, @audition)
     end
 
     private
 
     def audition_params
-        params.require(:audition).permit(:school, :year, instruments_attributes: [:name, :available_spots])
+        params.require(:audition).permit(:school, :year, instruments_attributes: [:id, :name, :available_spots, :_destroy])
     end
 
 end
