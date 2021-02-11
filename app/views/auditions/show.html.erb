@@ -8,9 +8,12 @@
         <%= instrument.name %> - <%= instrument.remaining_spots %> available
         <% instrument.players.each do |player| %>
         <div>
-            <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
+            <%= link_to "#{player.first_name} #{player.last_name}", audition_player_path(player) %>
         </div>
         <% end %>
     </div>
     <% end %>
+</div>
+<div>
+    <%= link_to "New Player", new_audition_player_path(@audition) %>
 </div>

@@ -7,5 +7,5 @@ First Choice: <%= @player.first_choice %><br>
 Second Choice: <%= @player.second_choice %><br>
 Third Choice: <%= @player.third_choice %><br>
 
-Audition: <%= link_to "#{@player.audition.school} - #{@player.audition.year.strftime("%Y")}", audition_path(@player.audition) %><br>
+Audition: <%= link_to "#{@player.audition.school} - #{@player.audition.year.strftime("%Y")}", user_audition_path(current_user, @player.audition) %><br>
 Instrument: <%= @player.instrument.name %>

@@ -48,7 +48,7 @@ class AuditionsController < ApplicationController
     private
 
     def audition_params
-        params.require(:audition).permit(:school, :year, instruments_attributes: [:id, :name, :available_spots, :_destroy])
+        params.require(:audition).permit(:school, :year, instruments_attributes: [:id, :name, :available_spots])
     end
 
 end

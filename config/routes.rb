@@ -15,10 +15,12 @@ Rails.application.routes.draw do
     resources :auditions, only: [:show, :index, :new, :create, :edit, :update]
   end
 
-  resources :auditions, only: [:new]
+  resources :auditions, only: [:new] do
+    resources :players, only: [:new, :create, :show]
+  end
+ 
+  resources :players, only: [:new]
   resources :instruments
-  resources :players
-  resources :audition_users
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
