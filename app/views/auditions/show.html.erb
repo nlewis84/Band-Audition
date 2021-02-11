@@ -1,15 +1,16 @@
-<h1>Show Audition</h1>
-<p>Audition Code: <%= @audition.code %></p>
+<h1><%= @audition.school %></h1>
+<h2><%= @audition.year.strftime("%B %Y") %></h2>
+<h3>Audition Code: <%= @audition.code %></h3>
 
 <div>
-<% @audition.instruments.each do |instrument| %>
+    <% @audition.instruments.each do |instrument| %>
     <div>
-    <%= instrument.name %> - <%= instrument.remaining_spots %> available
-    <% instrument.players.each do |player| %>
+        <%= instrument.name %> - <%= instrument.remaining_spots %> available
+        <% instrument.players.each do |player| %>
         <div>
-        <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
+            <%= link_to "#{player.first_name} #{player.last_name}", player_path(player) %>
         </div>
-    <% end %>
+        <% end %>
     </div>
-<% end %>
+    <% end %>
 </div>
