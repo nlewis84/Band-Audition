@@ -15,8 +15,6 @@ Rails.application.routes.draw do
     resources :auditions, only: [:show, :index]
   end
 
-  resources :auditions, only: [:index, :show, :new, :create, :edit, :update]
-
   resources :instruments
   resources :players
   resources :audition_users
