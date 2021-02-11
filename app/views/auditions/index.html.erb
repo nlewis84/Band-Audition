@@ -2,5 +2,13 @@ Welcome <%= current_user.username %>!
 
 <h2>Auditions</h2>
 <% @auditions.each do |audition| %>
-<%= link_to "#{audition.school} - #{audition.year.strftime("%Y")}", user_audition_path(current_user, audition) %>
+<div>
+    <%= link_to audition.school, user_audition_path(current_user, audition) %>
+    <p>
+        <%= audition.year.strftime("%Y") %>,
+        <%= pluralize(audition.instruments.count, "instrument") %>,
+        <%= pluralize(audition.users.count, "user") %>,
+        <%= pluralize(audition.players.count, "player") %>
+    </p>
+</div>
 <% end %>
