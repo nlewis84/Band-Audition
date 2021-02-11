@@ -1,5 +1,6 @@
+Welcome <%= current_user.username %>!
+
 <h2>Auditions</h2>
 <% @auditions.each do |audition| %>
 <%= link_to "#{audition.school} - #{audition.year.strftime("%Y")}", audition_path(audition) %>
 <% end %>
-

@@ -14,7 +14,17 @@ class AuditionsController < ApplicationController
     end
 
     def show
-        @audition = Audition.find(params[:id])
+        if params[:user_id]
+            @user = User.find_by(id: params[:user_id])
+            if @user.nil?
+                redirect_to user_path, flash[:error] = "User not found."
+            else
+                @audition = Audition.find(params[:id])
+            end
+        else
+            @audition = Audition.find(params[:id])
+        end
+        
     end
 
     def create
