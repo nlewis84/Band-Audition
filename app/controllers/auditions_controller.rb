@@ -45,6 +45,17 @@ class AuditionsController < ApplicationController
         redirect_to user_audition_path(current_user, @audition)
     end
 
+    def join
+        @audition = Audition.new
+    end
+
+    def code
+        binding.pry
+        @audition = Audition.find_by(code: params[:audition][:code])
+        @audition.users << current_user
+        redirect_to user_auditions_path(current_user)
+    end
+
     private
 
     def audition_params
