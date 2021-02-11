@@ -11,6 +11,7 @@ class AuditionsController < ApplicationController
 
     def new
         @audition = Audition.new
+        11.times { @audition.instruments.build }
     end
 
     def show
@@ -30,7 +31,7 @@ class AuditionsController < ApplicationController
     def create
         @audition = Audition.create(audition_params)  
         current_user.auditions << @audition
-        redirect_to audition_path(@audition)      
+        redirect_to user_audition_path(current_user, @audition)      
     end
 
     def join
@@ -52,6 +53,7 @@ class AuditionsController < ApplicationController
     private
 
     def audition_params
-        params.require(:audition).permit(:school, :year)
+        params.require(:audition).permit(:school, :year, instruments_attributes: [:name, :available_spots])
     end
+
 end

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Band Audition</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -8,21 +9,21 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <div>
+<div>
     <% if current_user %>
-      <%= link_to "Log Out", logout_path, method: :delete %>
-      <%= link_to "Join Audition", join_path %>
-      <%= link_to "New Audition", new_audition_path %>
-      <%= link_to "New Instrument", new_instrument_path %>
-      <%= link_to "New Player", new_player_path %>
-      <%= link_to "Auditions", user_auditions_path(current_user) %>
+    <%= link_to "Log Out", logout_path, method: :delete %>
+    <%= link_to "Join Audition", join_path %>
+    <%= link_to "New Audition", new_audition_path %>
+    <%= link_to "New Player", new_player_path %>
+    <%= link_to "Auditions", user_auditions_path(current_user) %>
     <% end %>
-  </div>
+</div>
 
-  <body>
+<body>
     <p><%= flash[:error] %></p>
     <%= yield %>
-  </body>
+</body>
+
 </html>

@@ -12,9 +12,10 @@ Rails.application.routes.draw do
 
 
   resources :users, only: [:show] do
-    resources :auditions, only: [:show, :index]
+    resources :auditions, only: [:show, :index, :new, :create]
   end
 
+  resources :auditions, only: [:new]
   resources :instruments
   resources :players
   resources :audition_users
