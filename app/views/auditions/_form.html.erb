@@ -1,23 +1,25 @@
 <%= form_for [current_user, @audition] do |f| %>
-<div>
-    <%= f.label :school %>
-    <%= f.text_field :school %>
-</div>
-<div>
-    <%= f.label :year %>
-    <%= f.date_field :year %>
-</div>
-<p>Instruments (leave blank if unused)</p>
-<%= f.fields_for :instruments do |inst| %>
-<li>
-    <%= inst.label :name %>
-    <%= inst.text_field :name %>
+<div class="parent">
+    <div class="div1 center">
 
-    <%= inst.label :available_spots %>
-    <%= inst.number_field :available_spots %>
-</li>
-<% end %>
-<div>
-    <%= f.submit %>
+        <%= f.label :school %>
+        <%= f.text_field :school %>
+
+        <%= f.label :year %>
+        <%= f.date_field :year %>
+        <p>Instruments (leave blank if unused)</p>
+        <%= f.fields_for :instruments do |inst| %>
+        <li>
+            <%= inst.label :name %>
+            <%= inst.text_field :name %>
+
+            <%= inst.label :available_spots %>
+            <%= inst.number_field :available_spots %>
+        </li>
+        <% end %>
+
+        <%= f.submit %>
+
+    </div>
 </div>
 <% end %>

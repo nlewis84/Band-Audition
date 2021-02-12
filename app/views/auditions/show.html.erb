@@ -1,19 +1,20 @@
-<h1><%= @audition.school %></h1>
-<h2><%= @audition.year.strftime("%B %Y") %></h2>
-<h3>Audition Code: <%= @audition.code %></h3>
-
-<div>
+<h2 class="spacing big"><%= @audition.school %></h2>
+<div class="spacing"><%= @audition.year.strftime("%B %Y") %> Audition Code: <%= @audition.code %></div>
+<div class="flex">
+    <div class="boxColor box boxAlignment justify">
+        <%= link_to "New Player", new_audition_player_path(@audition) %>
+    </div>
+</div>
+<div class="flex">
     <% @audition.instruments.each do |instrument| %>
-    <div>
-        <%= instrument.name %> - <%= instrument.remaining_spots %> available
+    <div class="boxColor box boxAlignment">
+        <strong><%= instrument.name %></strong>
+        <div class="small"><%= instrument.remaining_spots %> available</div>
         <% instrument.players.each do |player| %>
-        <div>
+        <div class="small">
             <%= link_to "#{player.first_name} #{player.last_name}", audition_player_path(@audition, player) %>
         </div>
         <% end %>
     </div>
     <% end %>
-</div>
-<div>
-    <%= link_to "New Player", new_audition_player_path(@audition) %>
 </div>

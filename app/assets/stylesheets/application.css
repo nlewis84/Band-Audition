@@ -46,7 +46,11 @@ p {
 
 div {
     font-size: 1.563rem;
-    line-height: 1.7rem;
+    line-height: 1.75rem;
+}
+
+div.small {
+    font-size: 1rem;
 }
 
 .center {
@@ -102,6 +106,7 @@ ol {
     padding-inline-start: 40px;
 }
 
+
 .box {
     background-clip: padding-box;
     display: -webkit-box;
@@ -109,7 +114,6 @@ ol {
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
-    height: 15.75rem;
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
     overflow: hidden;
@@ -160,9 +164,12 @@ ol {
     flex-direction: column;
     -webkit-justify-content: space-between;
     justify-content: space-between;
-    height: 4.5rem;
     padding: 1rem 1rem 0.75rem;
     position: relative;
+}
+
+.boxAlignment, .justify, boxColor {
+    justify-content: left;
 }
 
 .smallWhite {
@@ -211,6 +218,24 @@ ul {
     text-decoration: none;
 }
 
+a {
+    text-align: center;
+    justify-items: center;
+    transition: 0.3s;
+}
+
 a:visited{
+    color: #e0fbfc;
+}
+
+a:link {
+    color: #e0fbfc;
+}
+
+a:hover {
+    color: #98c1d9;
+}
+
+a:active {
     color: #e0fbfc;
 }
