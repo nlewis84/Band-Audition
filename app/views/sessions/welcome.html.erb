@@ -1,11 +1,19 @@
-<h1>Welcome to Band Audition!!</h1>
+<h1 class="center">Band Audition</h1>
 
-<p>
-    <%= link_to "Login", login_path %>
-</p>
-<p>
-    <%= link_to 'Login with Google!', '/auth/google_oauth2' %>
-</p>
-<p>
-    <%= link_to "Signup", signup_path %>
-</p>
+<ol class="flex">
+    <li class="boxColor smallBox justify">
+        <div class="boxAlignment center">
+            <div class="smallWhite"><%= link_to "Login", login_path %></div>
+        </div>
+    </li>
+    <li class="boxColor smallBox justify">
+        <div class="boxAlignment center">
+            <div class="smallWhite"><%= link_to 'Login with Google!', '/auth/google_oauth2' %></div>
+        </div>
+    </li>
+    <li class="boxColor smallBox justify">
+        <div class="boxAlignment center">
+            <div class="smallWhite"><%= link_to "Signup", signup_path %></div>
+        </div>
+    </li>
+</ol>

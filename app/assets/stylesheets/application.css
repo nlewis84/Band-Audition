@@ -1,11 +1,20 @@
 body {
-    color: rgba(0,0,0,0.87);
+    background-color: #e0fbfc;
+    color: #293241;
     font-family: 'Roboto',Helvetica,Arial,sans-serif;
     font-size: 0.8125rem;
     font-weight: 400;
     line-height: 1.25rem;
     margin: 0;
     min-width: 18.75rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    justify-content: center;
 }
 
 ol {
@@ -36,8 +45,24 @@ ol {
     width: 15.75rem;
 }
 
+.smallBox {
+    background-clip: padding-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 10rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 10rem;
+}
+
 .boxColor {
-    background-color: #74b1c5;
+    background-color: #ee6c4d;
     border: .0625rem solid #dadce0;
     -webkit-border-radius: 0.5rem;
     border-radius: 0.5rem;
@@ -72,7 +97,7 @@ ol {
     font-size: 0.85rem;
     font-weight: 400;
     line-height: 1.75rem;
-    color: #fff;
+    color: #293241;
 }
 
 .spacing {
@@ -90,7 +115,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(28, 109, 134);
+    background-color: #3d5a80;
 }
   
 .nav {
@@ -106,5 +131,13 @@ ul {
 }
   
 .nav:hover {
-    background-color: #111;
+    background-color: #293241;
+}
+
+.noDecoration a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: #e0fbfc;
 }
