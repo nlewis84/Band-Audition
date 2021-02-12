@@ -1,12 +1,18 @@
-<h1>Login!</h1>
+<div class="parent">
+    <div class="div1">
+        <h1 class="center">Login!</h1>
 
-<%= form_for :user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+        <div>
+            <%= form_for :user do |f| %>
+            <%= f.label :username %>
+            <%= f.text_field :username %>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    
-    <%= f.submit "Log In" %>
+            <%= f.label :password %>
+            <%= f.password_field :password %>
 
-<% end %>
+            <%= f.submit "Log In" %>
+
+            <% end %>
+        </div>
+    </div>
+</div>
