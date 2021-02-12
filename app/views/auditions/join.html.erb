@@ -1,9 +1,15 @@
-<h1>Join Audition</h1>
+<div class="parent">
+    <div class="div1">
+        <h1 class="center">Join Audition</h1>
 
-<%= form_for @audition, url: '/join' do |f| %>
-<div>
-    <%= f.label :code %>
-    <%= f.text_field :code %>
+        <div>
+            <%= form_for @audition, url: '/join' do |f| %>
+            <div>
+                <%= f.label :code %>
+                <%= f.text_field :code %>
+                <%= f.submit "Join Audition" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
 </div>
-<%= f.submit "Join Audition" %>
-<% end %>
