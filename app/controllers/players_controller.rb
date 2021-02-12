@@ -6,13 +6,11 @@ class PlayersController < ApplicationController
     end
 
     def show
-        binding.pry
         @player = Player.find(params[:id])
         @audition = Audition.find(params[:audition_id])
     end
 
     def create
-        binding.pry
         @player = Player.create(player_params)  
         @audition = Audition.find_by(id: params[:audition_id])
         @audition.players << @player
