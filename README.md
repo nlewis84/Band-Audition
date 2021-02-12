@@ -18,6 +18,7 @@ Welcome to the Band Audition web application! This app was created using Ruby on
 - Run `rake db:seed`
 - Run `rails s`
 - Open your browser and navigate to the local url provided by the `rails` server
+- The test login of `nathan:drums` is a great way for you to see some stubbed out functionality
 
 ## Contributing
 
