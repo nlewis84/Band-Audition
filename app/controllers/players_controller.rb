@@ -7,6 +7,7 @@ class PlayersController < ApplicationController
 
     def show
         @player = Player.find(params[:id])
+        @audition = Audition.find(params[:audition_id])
     end
 
     def create

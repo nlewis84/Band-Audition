@@ -1,37 +1,41 @@
 <%= form_for [@audition, @player] do |f| %>
-<div>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-</div>
-<div>
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-</div>
-<div>
-    <%= f.label :virtual %>
-    <%= f.check_box :virtual %>
-</div>
-<div>
-    <%= f.label :comment %>
-    <%= f.text_area :comment %>
-</div>
-<div>
-    <%= f.label :first_choice %>
-    <%= f.text_field :first_choice %>
-</div>
-<div>
-    <%= f.label :second_choice %>
-    <%= f.text_field :second_choice %>
-</div>
-<div>
-    <%= f.label :third_choice %>
-    <%= f.text_field :third_choice %>
-</div>
-<div>
-    <%= f.label :instrument %>
-    <%= f.collection_select :instrument, @audition.instruments, :id, :name %>
-</div>
-<div>
-    <%= f.submit "Create Player" %>
+<div class="parent">
+    <div class="div1 center">
+        <div>
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+        </div>
+        <div>
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+        </div>
+        <div>
+            <%= f.label :virtual %>
+            <%= f.check_box :virtual %>
+        </div>
+        <div>
+            <%= f.label :comment %>
+            <%= f.text_area :comment %>
+        </div>
+        <div>
+            <%= f.label :first_choice %>
+            <%= f.text_field :first_choice %>
+        </div>
+        <div>
+            <%= f.label :second_choice %>
+            <%= f.text_field :second_choice %>
+        </div>
+        <div>
+            <%= f.label :third_choice %>
+            <%= f.text_field :third_choice %>
+        </div>
+        <div>
+            <%= f.label :instrument %>
+            <%= f.collection_select :instrument, @audition.instruments, :id, :name %>
+        </div>
+        <div>
+            <%= f.submit "Create Player" %>
+        </div>
+    </div>
 </div>
 <% end %>
