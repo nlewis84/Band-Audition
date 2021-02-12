@@ -2,9 +2,8 @@ Rails.application.routes.draw do
 
   get '/' => 'sessions#welcome'
   get '/login' => 'sessions#new'
-  get '/auth/facebook/callback' => 'sessions#create'
-  #Old Login
-  #post '/login' => 'sessions#create'
+  get '/auth/google_oauth2/callback' => 'sessions#omniauth'
+  post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'

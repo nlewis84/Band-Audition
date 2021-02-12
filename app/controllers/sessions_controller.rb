@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    skip_before_action :has_access, only: [:new, :create, :welcome]
+    skip_before_action :has_access, only: [:new, :create, :welcome, :omniauth]
 
     def welcome
     end
@@ -8,34 +8,27 @@ class SessionsController < ApplicationController
         @user = User.new
     end
 
-    # NEW CREATE
-    def create
-        @user = User.find_or_create_by(uid: auth['uid']) do |u|
-          u.name = auth['info']['name']
-          u.email = auth['info']['email']
-          u.image = auth['info']['image']
-        end
+    def omniauth
+        @user = User.create_by_google_omniauth(auth)
      
-        session[:user_id] = @user.try(:id)
+        session[:user_id] = @user.id
      
         redirect_to 'user_auditions_path(@user)'
     end
      
-    # OLD CREATE
-    # def create
-    #     @user = User.find_by(username: params[:user][:username])
+    def create
+        @user = User.find_by(username: params[:user][:username])
         
-    #     if @user.try(:authenticate, params[:user][:password])
-    #         session[:user_id] = @user.id
-    #         redirect_to user_auditions_path(@user)
-    #     else
-    #         flash[:error] = "Sorry, login info was incorrect. Please try again."
-    #         redirect_to login_path
-    #     end
-    # end    
+        if @user.try(:authenticate, params[:user][:password])
+            session[:user_id] = @user.id
+            redirect_to user_auditions_path(@user)
+        else
+            flash[:error] = "Sorry, login info was incorrect. Please try again."
+            redirect_to login_path
+        end
+    end    
 
     def destroy
-        binding.pry
         session.delete(:user_id)
         redirect_to '/'
     end
