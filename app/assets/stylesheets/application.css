@@ -1,12 +1,48 @@
 body {
-    background-color: #e0fbfc;
+    background: linear-gradient(0.25turn, #e0fbfc, #3d5a80);
     color: #293241;
-    font-family: 'Roboto',Helvetica,Arial,sans-serif;
-    font-size: 0.8125rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
     font-weight: 400;
-    line-height: 1.25rem;
+    line-height: 18px;
     margin: 0;
     min-width: 18.75rem;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3.052rem;
+    line-height: 54px;
+}
+
+h1.big {
+    font-size: 4.768rem;
+}
+
+h2.border {
+    border-bottom: 2px solid #ccc;
+}
+
+h2 {}
+    font-size: 2.441rem;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 1.953rem;
+    line-height: 36px;
+}
+
+p {
+    margin-bottom: 18px;
+    font-size: 1.563rem;
+}
+
+div {
+    font-size: 1.563rem;
+    line-height: 1.7rem;
 }
 
 .center {
@@ -14,6 +50,39 @@ body {
 }
 
 .justify {
+    justify-content: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: .5fr repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 6; margin: auto;}
+    .div2 { grid-area: 2 / 2 / 3 / 3; margin: auto;}
+    .div3 { grid-area: 2 / 3 / 3 / 4; margin: auto;}
+    .div4 { grid-area: 2 / 4 / 3 / 5; margin: auto;}
+
+.buttonDiv {
+    background-color: #ee6c4d;
+    border: .0625rem solid #dadce0;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-clip: padding-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 10rem;
     justify-content: center;
 }
 
@@ -93,7 +162,6 @@ ol {
 }
 
 .smallWhite {
-    font-family: 'Google Sans',Roboto,Arial,sans-serif;
     font-size: 0.85rem;
     font-weight: 400;
     line-height: 1.75rem;
