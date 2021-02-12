@@ -6,7 +6,7 @@ class Audition < ApplicationRecord
     has_many :players
 
     validates :school, presence: true
-    validates :year, presence: true
+    validates :date, presence: true
 
     accepts_nested_attributes_for :instruments,
         allow_destroy: true,
@@ -18,7 +18,7 @@ class Audition < ApplicationRecord
     end
     
     def school_with_year
-        "#{self.school} - #{self.year.strftime("%Y")}"
+        "#{self.school} - #{self.date.strftime("%Y")}"
     end
 
 end

@@ -8,7 +8,7 @@
 nathan = User.create(username: "nathan", password: "drums", name: "Nathan Lewis")
 marshall = User.create(username: "marshall", password: "drums", name: "Marshall Lewis")
 katie = User.create(username: "katie", password: "drums", name: "Katie Lewis")
-hs = Audition.create(school: "High School", year: DateTime.new(2021))
+hs = Audition.create(school: "High School", date: DateTime.new(2021))
 nathan.auditions << hs
 marshall.auditions << hs
 katie.auditions << hs

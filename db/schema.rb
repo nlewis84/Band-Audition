@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_10_171342) do
+ActiveRecord::Schema.define(version: 2021_02_12_205900) do
 
   create_table "audition_instruments", force: :cascade do |t|
     t.integer "audition_id", null: false
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_02_10_171342) do
 
   create_table "auditions", force: :cascade do |t|
     t.string "school"
-    t.datetime "year"
+    t.datetime "date"
     t.string "code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

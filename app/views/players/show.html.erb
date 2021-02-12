@@ -8,7 +8,7 @@
         <div class="small">Second Choice: <%= @player.second_choice %></div>
         <div class="small">Third Choice: <%= @player.third_choice %></div>
 
-        <div class="small">Audition: <%= link_to "#{@player.audition.school} - #{@player.audition.year.strftime("%Y")}", user_audition_path(current_user, @player.audition) %></div>
+        <div class="small">Audition: <%= link_to "#{@player.audition.school} - #{@player.audition.date.strftime("%Y")}", user_audition_path(current_user, @player.audition) %></div>
         <div class="small">Instrument: <%= @player.instrument.name %></div>
     </div>
 </div>

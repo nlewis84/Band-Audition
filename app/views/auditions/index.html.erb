@@ -10,7 +10,7 @@
         <div class="boxAlignment">
             <h2>
                 <div class="noDecoration"><%= link_to audition.school, user_audition_path(current_user, audition) %></div>
-                <div class="smallWhite"><%= audition.year.strftime("%b %Y") %></div>
+                <div class="smallWhite"><%= audition.date.strftime("%b %Y") %></div>
                 <div class="smallWhite"><%= pluralize(audition.instruments.count, "instrument") %></div>
                 <div class="smallWhite"><%= pluralize(audition.users.count, "user") %></div>
                 <div class="smallWhite"><%= pluralize(audition.players.count, "player") %></div>
