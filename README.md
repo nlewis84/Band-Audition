@@ -1,24 +1,32 @@
-# README
+# Band Audition
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the Band Audition web application! This app was created using Ruby on Rails. It is an interface for auditioning players. While useful for musicians, this also has cross-functionality with other fine arts, sports, and leisure activities. In this current iteration, the User holds an administrator role and may create New Auditions, and Players. Auditions may be joined through the use of "Join Codes". A login is required and OmniAuth Google is utilized to facilitate this, in addition to a site-based signup/login.
 
-Things you may want to cover:
+* Ruby version 2.6.1
 
-* Ruby version
+* Rails version 6.1.1
 
-* System dependencies
+#Installation
 
-* Configuration
+- Download or clone this project
 
-* Database creation
+## Usage
 
-* Database initialization
+- `cd` into the `Band-Audition` directory
+- Run `bundle install`
+- Run `rake db:migrate` 
+- Run `rake db:seed`
+- Run `rails s`
+- Open your browser and navigate to the local url provided by the `rails` server
 
-* How to run the test suite
+## Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
+Bug reports and pull requests are welcome on GitHub at https://github.com/nlewis84/Band-Audition. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/nlewis84/Band-Audition/blob/master/CODE_OF_CONDUCT.md).
 
-* Deployment instructions
+## License
 
-* ...
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the Band-Audition project's codebases, and issue trackers is expected to follow the [code of conduct](https://github.com/nlewis84/Band-Audition/blob/master/CODE_OF_CONDUCT.md).
