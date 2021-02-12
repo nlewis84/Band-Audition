@@ -1,14 +1,21 @@
-Welcome <%= current_user.name %>!
-
-<h2>Auditions</h2>
-<% @auditions.each do |audition| %>
-<div>
-    <%= link_to audition.school, user_audition_path(current_user, audition) %>
-    <p>
-        <%= audition.year.strftime("%Y") %>,
-        <%= pluralize(audition.instruments.count, "instrument") %>,
-        <%= pluralize(audition.users.count, "user") %>,
-        <%= pluralize(audition.players.count, "player") %>
-    </p>
+<div class="spacing">
+    Welcome <%= current_user.name %>!
 </div>
-<% end %>
+<h2 class="spacing">Auditions</h2>
+
+<ol class="flex">
+
+    <% @auditions.each do |audition| %>
+    <li class="boxColor box">
+        <div class="boxAlignment">
+            <h2>
+                <div><%= link_to audition.school, user_audition_path(current_user, audition) %></div>
+                <div class="smallWhite"><%= audition.year.strftime("%b %Y") %></div>
+                <div class="smallWhite"><%= pluralize(audition.instruments.count, "instrument") %></div>
+                <div class="smallWhite"><%= pluralize(audition.users.count, "user") %></div>
+                <div class="smallWhite"><%= pluralize(audition.players.count, "player") %></div>
+            </h2>
+        </div>
+    </li>
+    <% end %>
+</ol>

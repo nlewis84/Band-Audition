@@ -11,14 +11,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<div>
+<ul>
     <% if current_user %>
-    <%= link_to "Log Out", logout_path, method: :delete %>
-    <%= link_to "Join Audition", join_path %>
-    <%= link_to "New Audition", new_audition_path %>
-    <%= link_to "Auditions", user_auditions_path(current_user) %>
+    <li class="nav"><%= link_to "Log Out", logout_path, method: :delete %></li>
+    <li class="nav"><%= link_to "Join Audition", join_path %></li>
+    <li class="nav"><%= link_to "New Audition", new_audition_path %></li>
+    <li class="nav"><%= link_to "Auditions", user_auditions_path(current_user) %></li>
     <% end %>
-</div>
+</ul>
 
 <body>
     <p><%= flash[:error] %></p>
