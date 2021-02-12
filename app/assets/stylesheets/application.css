@@ -24,6 +24,10 @@ h2.border {
     border-bottom: 2px solid #ccc;
 }
 
+h2.big {
+    font-size: 3.052rem;
+}
+
 h2 {}
     font-size: 2.441rem;
     line-height: 36px;
