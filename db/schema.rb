@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_12_205900) do
+ActiveRecord::Schema.define(version: 2021_02_13_041229) do
 
   create_table "audition_instruments", force: :cascade do |t|
     t.integer "audition_id", null: false
     t.integer "instrument_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "priority"
     t.index ["audition_id"], name: "index_audition_instruments_on_audition_id"
     t.index ["instrument_id"], name: "index_audition_instruments_on_instrument_id"
   end

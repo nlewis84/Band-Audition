@@ -16,7 +16,7 @@
 <div class="flex">
     <% @audition.instruments.each do |instrument| %>
     <div class="boxColor box boxAlignment">
-        <strong><%= instrument.name %></strong>
+        <strong><%= link_to instrument.name, edit_audition_instrument_path(@audition, instrument) %></strong>
         <div class="small"><%= instrument.remaining_spots %> available</div>
         <% instrument.players.each do |player| %>
         <div class="small">

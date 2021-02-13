@@ -1,0 +1,24 @@
+<div class="parent">
+    <div class="div1 center medium">
+        <h1 class="center">Edit an instrument</h1>
+
+        <%= form_for [@audition, @instrument] do |f| %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :available_spots %>
+        <%= f.number_field :available_spots %>
+
+        <%= f.fields_for :audition_instruments do |ai| %>
+        <div class="medium">
+            <%= ai.label :priority %>
+            <%= ai.number_field :priority %>
+        </div>
+        <% end %>
+
+        <%= f.submit %>
+
+        <% end %>
+    </div>
+</div>

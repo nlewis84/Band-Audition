@@ -7,7 +7,7 @@ class Audition < ApplicationRecord
 
     validates :school, presence: true
     validates :date, presence: true
-
+        
     accepts_nested_attributes_for :instruments,
         allow_destroy: true,
         :reject_if => proc { |att| att[:name].blank? || att[:available_spots].blank? }

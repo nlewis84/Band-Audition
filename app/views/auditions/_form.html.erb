@@ -1,6 +1,6 @@
 <%= form_for [current_user, @audition] do |f| %>
 <div class="parent">
-    <div class="div1 center">
+    <div class="div1 center medium">
 
         <%= f.label :school %>
         <%= f.text_field :school %>
@@ -9,13 +9,13 @@
         <%= f.date_field :date %>
         <p>Instruments (leave blank if unused)</p>
         <%= f.fields_for :instruments do |inst| %>
-        <li>
+        <div class="medium">
             <%= inst.label :name %>
             <%= inst.text_field :name %>
 
             <%= inst.label :available_spots %>
             <%= inst.number_field :available_spots %>
-        </li>
+        </div>
         <% end %>
 
         <%= f.submit %>
