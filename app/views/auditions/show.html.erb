@@ -9,6 +9,9 @@
     <div class="boxColor box boxAlignment justify">
         <%= link_to "Edit Audition", edit_user_audition_path(@audition) %>
     </div>
+    <div class="boxColor box boxAlignment justify">
+        <%= link_to "All Students", total_path(@audition) %>
+    </div>
 </div>
 <div class="flex">
     <% @audition.instruments.each do |instrument| %>

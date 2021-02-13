@@ -7,4 +7,5 @@ class Instrument < ApplicationRecord
     @players = self.players.count
     self.available_spots - @players
   end
+
 end

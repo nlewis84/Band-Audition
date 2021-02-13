@@ -5,6 +5,11 @@ class PlayersController < ApplicationController
         @audition = Audition.find(params[:audition_id])
     end
 
+    def total
+        @audition = Audition.find(params[:audition_id])
+        @players = Player.belonging_to_current_audition(@audition)
+    end
+
     def show
         @player = Player.find(params[:id])
         @audition = Audition.find(params[:audition_id])

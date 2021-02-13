@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/signup' => 'users#create'
   get '/join' => 'auditions#join'
   post '/join' => 'auditions#code'
+  get '/auditions/:audition_id/players/total' => 'players#total', as: :total
 
 
   resources :users, only: [:show] do

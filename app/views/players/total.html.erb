@@ -1,0 +1,16 @@
+<h2 class="spacing big"><%= @audition.school %></h2>
+<% if @players.blank? %>
+<h2 class="spacing">No players yet for this audition!</h2>
+<% else %>
+<div class="flex">
+    <% @players.each do |p| %>
+    <div class="boxColor box boxAlignment">
+        <strong><%= p.first_name %> <%= p.last_name %></strong>
+        <div class="small"><b>First Choice: </b><%= p.first_choice %></div>
+        <div class="small"><b>Second Choice: </b><%= p.second_choice %></div>
+        <div class="small"><b>Third Choice: </b><%= p.third_choice %></div>
+        <div class="small"><b>Instrument: </b><%= p.instrument.name %></div>
+    </div>
+    <% end %>
+</div>
+<% end %>
