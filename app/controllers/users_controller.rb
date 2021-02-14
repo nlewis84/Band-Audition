@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     skip_before_action :has_access, only: [:new, :create]
+    skip_before_action :restricted, only: [:show]
 
     def new
         @user = User.new

@@ -1,4 +1,5 @@
 class PlayersController < ApplicationController
+    skip_before_action :restricted
 
     def new
         @player = Player.new

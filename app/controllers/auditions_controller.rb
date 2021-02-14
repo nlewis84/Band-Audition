@@ -1,4 +1,5 @@
 class AuditionsController < ApplicationController
+    skip_before_action :restricted
 
     def index
         if params[:user_id]

@@ -1,5 +1,6 @@
 class InstrumentsController < ApplicationController
-    
+    skip_before_action :restricted
+
     def new
         @instrument = Instrument.new
         @instrument.audition_instruments.build

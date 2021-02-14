@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
     skip_before_action :has_access, only: [:new, :create, :welcome, :omniauth]
+    skip_before_action :restricted, only: [:destroy]
 
     def welcome
     end
