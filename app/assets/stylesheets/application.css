@@ -65,6 +65,27 @@ div.medium {
     justify-content: center;
 }
 
+#error_explanation {
+    background-color: red;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#error_explanation ul {
+    background-color: red;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.field_with_errors {
+    display: inline;
+}
+
+.field_with_errors input[type=text] { 
+    display: inline; 
+    border: 1px solid #cc0033;
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
