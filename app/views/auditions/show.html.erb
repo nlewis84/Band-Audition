@@ -1,6 +1,6 @@
 <h2 class="spacing big"><%= @audition.school %></h2>
 <div class="spacing">
-    <%= @audition.date.strftime("%B %Y") %> ~ Audition Code: <%= @audition.code %>
+    <%= @audition.formatted_date %> ~ Audition Code: <%= @audition.code %>
 </div>
 <div class="flex">
     <div class="boxColor box boxAlignment justify">
