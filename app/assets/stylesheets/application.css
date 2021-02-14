@@ -16,10 +16,11 @@
     --color8: #4361ee;
     --color9: #4895ef;
     --color10: #4cc9f0;
+    --gradient: var(--color6), var(--color7), var(--color8), var(--color9), var(--color10);
 }
 
 body {
-    background: linear-gradient(0.25turn, var(--color8), var(--color10));
+    background: linear-gradient(0.25turn, var(--gradient));
     color: white;
     font-family: 'Lato', sans-serif;
     font-size: 10px;
