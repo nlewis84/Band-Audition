@@ -33,15 +33,22 @@ class AuditionsController < ApplicationController
     end
 
     def create
-        @audition = Audition.create(audition_params)  
-        current_user.auditions << @audition
-        redirect_to user_audition_path(current_user, @audition)      
+        @audition = Audition.create(audition_params) 
+        if @audition.save 
+            current_user.auditions << @audition
+            redirect_to user_audition_path(current_user, @audition)      
+        else
+            render :new
+        end
     end
 
     def update
         @audition = Audition.find(params[:id])
-        @audition.update(audition_params)
-        redirect_to user_audition_path(current_user, @audition)
+        if @audition.update(audition_params)
+            redirect_to user_audition_path(current_user, @audition)
+        else
+            render :edit
+        end
     end
 
     def join
