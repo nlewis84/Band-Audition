@@ -20,6 +20,12 @@ class Instrument < ApplicationRecord
     !!self.available_spots
   end
 
+  def available
+    if self.limited_spots
+      "#{self.remaining_spots} available"
+    end
+  end
+
   def priority
     self.audition_instruments.first.priority
   end

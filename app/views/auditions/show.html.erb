@@ -10,7 +10,7 @@
         <%= link_to "Edit Audition", edit_user_audition_path(@audition) %>
     </div>
     <div class="boxColor box boxAlignment justify">
-        <%= link_to "All Students", total_path(@audition) %>
+        <%= link_to "All Players", total_path(@audition) %>
     </div>
 </div>
 <div class="flex">
@@ -18,9 +18,7 @@
     <div class="boxColor box boxAlignment">
         <strong><%= link_to instrument.name, edit_audition_instrument_path(@audition, instrument) %></strong>
         <div class="small">
-            <% if instrument.limited_spots %>
-            <%= instrument.remaining_spots %> available
-            <% end %>
+            <%= instrument.available %>
         </div>
         <% instrument.players.each do |player| %>
         <div class="small">

@@ -16,7 +16,7 @@
     --color8: #4361ee;
     --color9: #4895ef;
     --color10: #4cc9f0;
-    --gradient: var(--color6), var(--color7), var(--color8), var(--color9), var(--color10);
+    --gradient: var(--color7), var(--color8), var(--color9), var(--color10);
 }
 
 body {
@@ -300,7 +300,7 @@ ul {
 }
   
 .nav:hover {
-    background-color: var(--color8);
+    background-color: var(--color7);
 }
 
 .noDecoration a {
