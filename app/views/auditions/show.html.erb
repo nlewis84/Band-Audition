@@ -17,7 +17,11 @@
     <% @audition.instruments.each do |instrument| %>
     <div class="boxColor box boxAlignment">
         <strong><%= link_to instrument.name, edit_audition_instrument_path(@audition, instrument) %></strong>
-        <div class="small"><%= instrument.remaining_spots %> available</div>
+        <div class="small">
+            <% if instrument.limited_spots %>
+            <%= instrument.remaining_spots %> available
+            <% end %>
+        </div>
         <% instrument.players.each do |player| %>
         <div class="small">
             <%= link_to "#{player.first_name} #{player.last_name}", audition_player_path(@audition, player) %>

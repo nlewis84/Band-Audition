@@ -20,8 +20,11 @@ class InstrumentsController < ApplicationController
     def update
         @instrument = Instrument.find(params[:id])
         @audition = Audition.find_by(id: params[:audition_id])
-        @instrument.update(instrument_params)
-        redirect_to user_audition_path(current_user, @audition)
+        if @instrument.update(instrument_params)
+            redirect_to user_audition_path(current_user, @audition)
+        else
+            render :edit
+        end
     end
 
     private
