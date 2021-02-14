@@ -1,14 +1,14 @@
 <h2 class="spacing big">Show Player</h2>
 <div class="flex">
     <div class="boxColor box boxAlignment justify">
-        <div class="small">Name: <%= @player.first_name %> <%= @player.last_name %></div>
-        <div class="small">Virtual: <%= !!@player.virtual ? "Yes" : "No" %></div>
+        <div class="small">Name: <%= @player.full_name %></div>
+        <div class="small">Virtual: <%= @player.affirmative %></div>
         <div class="small">Comments: <%= @player.comment %></div>
         <div class="small">First Choice: <%= @player.first_choice %></div>
         <div class="small">Second Choice: <%= @player.second_choice %></div>
         <div class="small">Third Choice: <%= @player.third_choice %></div>
 
-        <div class="small">Audition: <%= link_to "#{@player.audition.school} - #{@player.audition.formatted_date}", user_audition_path(current_user, @player.audition) %></div>
+        <div class="small">Audition: <%= link_to "#{@player.school} - #{@player.audition.formatted_date}", user_audition_path(current_user, @player.audition) %></div>
         <div class="small">Instrument: <%= @player.instrument.name %></div>
     </div>
 </div>

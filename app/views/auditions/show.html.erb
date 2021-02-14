@@ -24,7 +24,7 @@
         </div>
         <% instrument.players.each do |player| %>
         <div class="small">
-            <%= link_to "#{player.first_name} #{player.last_name}", audition_player_path(@audition, player) %>
+            <%= link_to "#{player.full_name}", audition_player_path(@audition, player) %>
         </div>
         <% end %>
     </div>
