@@ -37,7 +37,11 @@ class PlayersController < ApplicationController
         @player = Player.find(params[:id])
         @audition = Audition.find_by(id: params[:audition_id])
         @player.update(player_params)
-        redirect_to audition_player_path(@audition, @player)
+        if @player.save
+            redirect_to audition_player_path(@audition, @player)
+        else
+            render :edit
+        end
     end
 
     def destroy
