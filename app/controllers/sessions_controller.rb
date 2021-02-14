@@ -10,10 +10,8 @@ class SessionsController < ApplicationController
 
     def omniauth
         @user = User.create_by_google_omniauth(auth)
-     
         session[:user_id] = @user.id
-     
-        redirect_to 'user_auditions_path(@user)'
+        redirect_to user_auditions_path(@user)
     end
      
     def create

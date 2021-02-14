@@ -56,9 +56,15 @@ class AuditionsController < ApplicationController
     end
 
     def code
-        @audition = Audition.find_by(code: params[:audition][:code])
-        @audition.users << current_user
-        redirect_to user_auditions_path(current_user)
+        binding.pry
+        if @audition = Audition.find_by(code: params[:audition][:code])
+            @audition.users << current_user
+            @audition.save
+            redirect_to user_auditions_path(current_user)
+        else
+            flash[:error] = "Sorry, audition code was not valid. Please try again."
+            redirect_to join_path
+        end
     end
 
     private
