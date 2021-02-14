@@ -59,7 +59,6 @@ class AuditionsController < ApplicationController
     def code
         if @audition = Audition.find_by(code: params[:audition][:code])
             @audition.users << current_user
-            @audition.save
             redirect_to user_auditions_path(current_user)
         else
             flash[:error] = "Sorry, audition code was not valid. Please try again."
