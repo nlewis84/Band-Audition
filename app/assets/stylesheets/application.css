@@ -65,6 +65,12 @@ div.medium {
     justify-content: center;
 }
 
+.flash_error {
+    background-color: red;
+    text-align: center;
+    padding-top: 10px;
+}
+
 #error_explanation {
     background-color: red;
     text-align: center;
