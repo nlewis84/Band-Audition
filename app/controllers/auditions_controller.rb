@@ -56,7 +56,6 @@ class AuditionsController < ApplicationController
     end
 
     def code
-        binding.pry
         if @audition = Audition.find_by(code: params[:audition][:code])
             @audition.users << current_user
             @audition.save
