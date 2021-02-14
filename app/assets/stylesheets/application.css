@@ -172,6 +172,15 @@ input[type=submit] {
     cursor: pointer;
 }
 
+table {
+    margin: auto;
+    font-size: var(--size6);
+}
+
+tr {
+
+}
+
 ol {
     display: block;
     margin: 0;

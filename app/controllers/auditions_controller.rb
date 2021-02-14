@@ -11,7 +11,7 @@ class AuditionsController < ApplicationController
 
     def new
         @audition = Audition.new
-        11.times { @audition.instruments.build }
+        15.times { @audition.instruments.build }
     end
 
     def edit
