@@ -5,6 +5,8 @@ class AuditionsController < ApplicationController
         if params[:user_id]
             @auditions = User.find(params[:user_id]).auditions
         else
+            # search params from live coding challenge
+            # @auditions = Audition.where("school like ?", "%#{params[:search]}%")
             @auditions = Audition.all
         end
     end
@@ -34,8 +36,9 @@ class AuditionsController < ApplicationController
     end
 
     def create
-        @audition = Audition.create(audition_params) 
+        @audition = Audition.new(audition_params) 
         if @audition.save 
+            ## current_user.auditions.build
             current_user.auditions << @audition
             redirect_to user_audition_path(current_user, @audition)      
         else
@@ -69,7 +72,7 @@ class AuditionsController < ApplicationController
     private
 
     def audition_params
-        params.require(:audition).permit(:school, :date, instruments_attributes: [:id, :name, :available_spots])
+        params.require(:audition).permit(:audition, :school, :date, instruments_attributes: [:id, :name, :available_spots])
     end
 
 end

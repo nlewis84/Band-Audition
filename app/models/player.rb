@@ -4,6 +4,7 @@ class Player < ApplicationRecord
 
   validates :first_name, :last_name, presence: true
 
+  # build a scope that returns audition with the most players
   scope :belonging_to_current_audition, -> (audition) { where('audition_id = ?', audition)}
 
   def full_name

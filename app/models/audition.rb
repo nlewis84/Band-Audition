@@ -13,7 +13,6 @@ class Audition < ApplicationRecord
         :reject_if => proc { |att| att[:name].blank? || att[:available_spots].blank? }
     
     before_save do
-        binding.pry
         string_length = 6
         self.code = rand(36**string_length).to_s(36)
     end
