@@ -18,7 +18,7 @@ class AuditionsController < ApplicationController
 
     def edit
         @audition = Audition.find(params[:id])
-        4.times { @audition.instruments.build }
+        15.times { @audition.instruments.build }
     end
 
     def show
