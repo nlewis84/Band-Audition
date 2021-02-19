@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :parents
   get '/' => 'sessions#welcome'
   get '/login' => 'sessions#new'
   get '/auth/google_oauth2/callback' => 'sessions#omniauth'
