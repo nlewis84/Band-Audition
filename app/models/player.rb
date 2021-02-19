@@ -1,7 +1,7 @@
 class Player < ApplicationRecord
   belongs_to :audition
   belongs_to :instrument
-  has_many :parents
+  has_many :guardians
 
   validates :first_name, :last_name, presence: true
 

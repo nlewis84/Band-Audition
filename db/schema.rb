@@ -10,23 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_13_041229) do
-
-  create_table "Players", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.boolean "virtual"
-    t.string "comment"
-    t.string "first_choice"
-    t.string "second_choice"
-    t.string "third_choice"
-    t.integer "audition_id", null: false
-    t.integer "instrument_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["audition_id"], name: "index_players_on_audition_id"
-    t.index ["instrument_id"], name: "index_players_on_instrument_id"
-  end
+ActiveRecord::Schema.define(version: 2021_02_19_223539) do
 
   create_table "audition_instruments", force: :cascade do |t|
     t.integer "audition_id", null: false
@@ -55,11 +39,35 @@ ActiveRecord::Schema.define(version: 2021_02_13_041229) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "guardians", force: :cascade do |t|
+    t.string "name"
+    t.integer "player_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_guardians_on_player_id"
+  end
+
   create_table "instruments", force: :cascade do |t|
     t.string "name"
     t.integer "available_spots"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.boolean "virtual"
+    t.string "comment"
+    t.string "first_choice"
+    t.string "second_choice"
+    t.string "third_choice"
+    t.integer "audition_id", null: false
+    t.integer "instrument_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["audition_id"], name: "index_players_on_audition_id"
+    t.index ["instrument_id"], name: "index_players_on_instrument_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,10 +78,11 @@ ActiveRecord::Schema.define(version: 2021_02_13_041229) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "Players", "auditions"
-  add_foreign_key "Players", "instruments"
   add_foreign_key "audition_instruments", "auditions"
   add_foreign_key "audition_instruments", "instruments"
   add_foreign_key "audition_users", "auditions"
   add_foreign_key "audition_users", "users"
+  add_foreign_key "guardians", "players"
+  add_foreign_key "players", "auditions"
+  add_foreign_key "players", "instruments"
 end
