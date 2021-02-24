@@ -8,7 +8,7 @@ class PlayersController < ApplicationController
 
     def total
         @audition = Audition.find(params[:audition_id])
-        @players = Player.belonging_to_current_audition(@audition)
+        @players = Player.belonging_to_current_audition(@audition).sorted_last_then_first
     end
 
     def show

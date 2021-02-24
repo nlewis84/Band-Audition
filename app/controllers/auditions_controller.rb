@@ -31,8 +31,7 @@ class AuditionsController < ApplicationController
             end
         else
             @audition = Audition.find(params[:id])
-        end
-        
+        end        
     end
 
     def create
