@@ -3,7 +3,6 @@
     <%= @audition.formatted_date %> ~ Audition Code: <%= @audition.code %>
 </div>
 <div class="flex">
-<%= binding.pry %>
     <% if !@audition.instruments.blank? %>
     <div class="boxColor box boxAlignment justify">
         <%= link_to "New Player", new_audition_player_path(@audition) %>
