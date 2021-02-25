@@ -5,11 +5,16 @@ class AuditionsController < ApplicationController
         if params[:user_id]
             @auditions = User.find(params[:user_id]).auditions
         else
-            # search params from live coding challenge
-            # @auditions = Audition.where("school like ?", "%#{params[:search]}%")
             @auditions = Audition.all
         end
     end
+
+    # SEARCH FUNCTIONALITY
+    # def search
+    #     @auditions = Audition.where("school like ?", "%#{params[:q]}%")
+
+    #     render :index
+    # end
 
     def new
         @audition = Audition.new
