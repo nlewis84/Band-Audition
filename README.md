@@ -6,6 +6,10 @@ Welcome to the Band Audition web application! This app was created using Ruby on
 
 - Rails version 6.1.1
 
+## Heroku
+
+- If you would like to give this app a try without going through the steps below, visit https://band-audition.herokuapp.com/!
+
 ## Installation
 
 - Download or clone this project
