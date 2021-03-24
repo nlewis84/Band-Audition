@@ -2,7 +2,7 @@
 
 Welcome to the Band Audition web application! This app was created using Ruby on Rails. It is an interface for auditioning players. While useful for musicians, this also has cross-functionality with other fine arts, sports, and leisure activities. In this current iteration, the User holds an administrator role and may create New Auditions, and Players. Auditions may be joined through the use of "Join Codes". A login is required and OmniAuth Google is utilized to facilitate this, in addition to a site-based signup/login.
 
-- Ruby version 2.6.1
+- Ruby version 2.7.2
 
 - Rails version 6.1.1
 
@@ -14,6 +14,7 @@ Welcome to the Band Audition web application! This app was created using Ruby on
 
 - `cd` into the `Band-Audition` directory
 - Run `bundle install`
+- Run `rake db:create`
 - Run `rake db:migrate` 
 - Run `rake db:seed`
 - Run `rails s`
