@@ -178,10 +178,6 @@ table {
     font-size: var(--size6);
 }
 
-tr {
-
-}
-
 ol {
     display: block;
     margin: 0;
@@ -328,3 +324,18 @@ a:hover {
 a:active {
     color: white;
 }
+
+@media screen and (max-width:830px) {
+    div.div1 h1 {
+        font-size: var(--size2);
+    }
+
+    .buttonDiv {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .div2 { grid-area: 2 / 3 / 3 / 4; margin: auto;}
+    .div3 { grid-area: 3 / 3 / 4 / 4; margin: auto;}
+    .div4 { grid-area: 4 / 3 / 5 / 4; margin: auto;}
+  }
