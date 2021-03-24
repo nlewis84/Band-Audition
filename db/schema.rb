@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2021_02_13_041229) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "audition_instruments", force: :cascade do |t|
-    t.integer "audition_id", null: false
-    t.integer "instrument_id", null: false
+    t.bigint "audition_id", null: false
+    t.bigint "instrument_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "priority"
@@ -23,8 +26,8 @@ ActiveRecord::Schema.define(version: 2021_02_13_041229) do
   end
 
   create_table "audition_users", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "audition_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "audition_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["audition_id"], name: "index_audition_users_on_audition_id"
@@ -54,8 +57,8 @@ ActiveRecord::Schema.define(version: 2021_02_13_041229) do
     t.string "first_choice"
     t.string "second_choice"
     t.string "third_choice"
-    t.integer "audition_id", null: false
-    t.integer "instrument_id", null: false
+    t.bigint "audition_id", null: false
+    t.bigint "instrument_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["audition_id"], name: "index_players_on_audition_id"

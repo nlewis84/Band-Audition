@@ -139,6 +139,7 @@ GEM
     omniauth-oauth2 (1.7.1)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
+    pg (1.2.3)
     pry (0.14.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -208,7 +209,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thin (1.8.0)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -254,6 +254,7 @@ DEPENDENCIES
   listen (~> 3.3)
   omniauth (~> 1.9.1)
   omniauth-google-oauth2
+  pg
   pry
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
@@ -261,7 +262,6 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
-  sqlite3 (~> 1.4)
   thin
   turbolinks (~> 5)
   tzinfo-data
@@ -273,4 +273,4 @@ RUBY VERSION
    ruby 2.6.1p33
 
 BUNDLED WITH
-   2.2.4
+   2.2.11
