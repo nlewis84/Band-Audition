@@ -124,7 +124,7 @@ div.medium {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: .5fr repeat(3, 1fr);
-    grid-column-gap: 0px;
+    grid-column-gap: 5px;
     grid-row-gap: 0px;
 }
     
@@ -325,7 +325,7 @@ a:active {
     color: white;
 }
 
-@media screen and (max-width:830px) {
+@media screen and (max-width:811px) {
     div.div1 h1 {
         font-size: var(--size2);
     }
@@ -348,6 +348,10 @@ a:active {
         font-size: var(--size6);
         display: grid;
     }
+
+    div.div2 {font-size: var(--size6);}
+    div.div3 {font-size: var(--size6);}
+    div.div4 {font-size: var(--size6);}
 
     #player_virtual {
         margin: 0 auto;

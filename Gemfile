@@ -59,4 +59,5 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Can probably remove this to clear up error message when running the Rails Server
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
