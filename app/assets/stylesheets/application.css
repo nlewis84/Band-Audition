@@ -89,6 +89,8 @@ div.medium {
 
 .justify {
     justify-content: center;
+    top: 0; 
+    transition: top 0.2s ease-in-out 0s;
 }
 
 .flash_error {
@@ -129,14 +131,18 @@ div.medium {
 }
     
 .div1 { grid-area: 1 / 1 / 2 / 6; margin: auto;}
-.div2 { grid-area: 2 / 2 / 3 / 3; margin: auto;}
-.div3 { grid-area: 2 / 3 / 3 / 4; margin: auto;}
-.div4 { grid-area: 2 / 4 / 3 / 5; margin: auto;}
+.div2 { grid-area: 2 / 2 / 3 / 3; margin: auto; top: 0; transition: top 0.2s ease-in-out 0s;}
+.div3 { grid-area: 2 / 3 / 3 / 4; margin: auto; top: 0; transition: top 0.2s ease-in-out 0s;}
+.div4 { grid-area: 2 / 4 / 3 / 5; margin: auto; top: 0; transition: top 0.2s ease-in-out 0s;}
+
+.div2:hover, .div3:hover, .div4:hover, .justify:hover {    
+    top: -3px;
+ }
 
 .buttonDiv {
     background-color: var(--color7);
     border: .0625rem solid #dadce0;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
     -webkit-border-radius: 0.5rem;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -159,7 +165,7 @@ input[type=submit] {
     color: white;
     background-color: var(--color7);
     border: .0625rem solid #dadce0;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
     -webkit-border-radius: 0.5rem;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -227,7 +233,7 @@ ol {
     -webkit-border-radius: 0.5rem;
     border-radius: 0.5rem;
     overflow: hidden;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
 }
 
 .flex {
@@ -307,6 +313,7 @@ a {
     text-align: center;
     justify-items: center;
     transition: 0.3s;
+
 }
 
 a:visited{
@@ -323,6 +330,10 @@ a:hover {
 
 a:active {
     color: white;
+}
+
+.div2 a, .div3 a, .div4 a {     
+    text-decoration: none;
 }
 
 @media screen and (max-width:811px) {
