@@ -11,7 +11,7 @@ Welcome to the Band Audition web application! This app was created using Ruby on
 - If you would like to give this app a try, visit https://band-audition.herokuapp.com/
 
 
-## :open_book: Demo 
+## :loud_sound: Demo 
 
 - Click the picture below to see a video demo!
 
