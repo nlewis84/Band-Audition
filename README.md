@@ -27,7 +27,7 @@ Welcome to the Band Audition web application! This app was created using Ruby on
 
 ## :musical_keyboard: Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/nlewis84/Band-Audition. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/nlewis84/Band-Audition/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub [here](https://github.com/nlewis84/Band-Audition). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/nlewis84/Band-Audition/blob/master/CODE_OF_CONDUCT.md).
 
 ## :microphone: Code of Conduct
 
