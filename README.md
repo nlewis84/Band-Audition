@@ -10,6 +10,14 @@ Welcome to the Band Audition web application! This app was created using Ruby on
 
 - If you would like to give this app a try, visit https://band-audition.herokuapp.com/
 
+
+## :open_book: Demo 
+
+- Click the picture below to see a video demo!
+
+[![Band Audition Home Screen](http://img.youtube.com/vi/-bsBpFOtLtg/0.jpg)](http://www.youtube.com/watch?v=-bsBpFOtLtg)
+
+
 ## :trumpet: Installation
 
 - Download or clone this project
