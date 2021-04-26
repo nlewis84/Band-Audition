@@ -8,7 +8,7 @@ Welcome to the Band Audition web application! This app was created using Ruby on
 
 ## :drum: Website
 
-- If you would like to give this app a try without going through the steps below, visit https://band-audition.herokuapp.com/
+- If you would like to give this app a try, visit https://band-audition.herokuapp.com/
 
 ## :trumpet: Installation
 
