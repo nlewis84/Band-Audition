@@ -35,7 +35,6 @@ class PlayersController < ApplicationController
     end
 
     def update
-        binding.pry
         @player = Player.find(params[:id])
         @audition = Audition.find_by(id: params[:audition_id])
         

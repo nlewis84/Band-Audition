@@ -4,9 +4,9 @@
 </div>
 <div class="flex">
     <% if !@audition.instruments.blank? %>
-        <div class="boxColor box boxAlignment justify">
-            <%= link_to "New Player", new_audition_player_path(@audition) %>
-        </div>
+    <div class="boxColor box boxAlignment justify">
+        <%= link_to "New Player", new_audition_player_path(@audition) %>
+    </div>
     <% end %>
     <div class="boxColor box boxAlignment justify">
         <%= link_to "Edit Audition", edit_user_audition_path(@audition) %>
@@ -17,20 +17,20 @@
 </div>
 <div class="flex">
     <% if @audition.instruments.blank? %>
-        <h2>Add Instruments by clicking Edit Audition above</h2>
+    <h2>Add Instruments by clicking Edit Audition above</h2>
     <% else %>
-        <% @audition.instruments.each do |instrument| %>
-        <div class="boxColor box boxAlignment">
-            <strong><%= link_to instrument.name, edit_audition_instrument_path(@audition, instrument) %></strong>
-            <div class="small">
-                <%= instrument.available %>
-            </div>
-            <% instrument.players.each do |player| %>
-            <div class="small">
-                <%= link_to "#{player.full_name}", audition_player_path(@audition, player) %>
-            </div>
-            <% end %>
+    <% @audition.instruments.each do |instrument| %>
+    <div class="boxColor box boxAlignment">
+        <strong><%= link_to instrument.name, edit_audition_instrument_path(@audition, instrument) %></strong>
+        <div class="small">
+            <%= instrument.available %>
+        </div>
+        <% instrument.players.sorted_last_then_first.each do |player| %>
+        <div class="small">
+            <%= link_to "#{player.full_name}", audition_player_path(@audition, player) %>
         </div>
         <% end %>
+    </div>
+    <% end %>
     <% end %>
 </div>
