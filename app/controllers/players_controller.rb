@@ -39,7 +39,7 @@ class PlayersController < ApplicationController
         @audition = Audition.find_by(id: params[:audition_id])
         
         # this code should be looked at
-        @instrument = Instrument.find_by(id: params[:player][:instrument])
+        @instrument = Instrument.find_by(id: params[:player][:instrument].to_i)
         @instrument.players << @player
         
         # this code is fine
