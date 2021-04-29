@@ -23,7 +23,7 @@ class PlayersController < ApplicationController
         @instrument = Instrument.find_by(id: params[:player][:instrument])
         @instrument.players << @player
         if @player.save
-            redirect_to audition_player_path(@audition, @player)
+            redirect_to user_audition_path(current_user, @audition)
         else
             render :new
         end
