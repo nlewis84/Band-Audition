@@ -1,371 +1,417 @@
 :root {
-    --size1: 4.209rem;
-    --size2: 3.157rem;
-    --size3: 2.369rem;
-    --size4: 1.777rem;
-    --size5: 1.333rem;
-    --size6: 1rem;
-    --size7: 0.75rem;
-    --color1: #f72585;
-    --color2: #b5179e;
-    --color3: #7209b7;
-    --color4: #560bad;
-    --color5: #3a0ca3;
-    --color6: #3a0ca3;
-    --color7: #3f37c9;
-    --color8: #4361ee;
-    --color9: #4895ef;
-    --color10: #4cc9f0;
-    --gradient: var(--color7), var(--color8), var(--color9), var(--color10);
+  --size1: 4.209rem;
+  --size2: 3.157rem;
+  --size3: 2.369rem;
+  --size4: 1.777rem;
+  --size5: 1.333rem;
+  --size6: 1rem;
+  --size7: 0.75rem;
+  --color1: #f72585;
+  --color2: #b5179e;
+  --color3: #7209b7;
+  --color4: #560bad;
+  --color5: #3a0ca3;
+  --color6: #3a0ca3;
+  --color7: #3f37c9;
+  --color8: #4361ee;
+  --color9: #4895ef;
+  --color10: #4cc9f0;
+  --gradient: var(--color7), var(--color8), var(--color9), var(--color10);
 }
 
 body {
-    background: linear-gradient(0.25turn, var(--gradient));
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 18px;
-    margin: 0;
-    min-width: 18.75rem;
-    height: 100%;
-    width: 100%;
+  background: linear-gradient(0.25turn, var(--gradient));
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+  min-width: 18.75rem;
+  height: 100%;
+  width: 100%;
 }
 
 h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: var(--size2);
-    line-height: 54px;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-    0px 8px 13px rgba(0,0,0,0.1),
-    0px 18px 23px rgba(0,0,0,0.1);
+  font-family: "Raleway", sans-serif;
+  font-size: var(--size2);
+  line-height: 54px;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 h1.big {
-    font-size: 5.61rem;
+  font-size: 5.61rem;
 }
 
 h2.big {
-    font-size: var(--size2);
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
+  font-size: var(--size2);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: var(--size3);
-    line-height: 36px;
-    margin-bottom: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: var(--size3);
+  line-height: 36px;
+  margin-bottom: 16px;
 }
 
 h3 {
-    font-size: var(--size4);
-    line-height: 36px;
+  font-size: var(--size4);
+  line-height: 36px;
 }
 
 p {
-    margin-bottom: 18px;
-    font-size: var(--size5);
+  margin-bottom: 18px;
+  font-size: var(--size5);
 }
 
 div {
-    font-size: var(--size5);
-    line-height: 1.75rem;
+  font-size: var(--size5);
+  line-height: 1.75rem;
+}
+
+div.div1 > div {
+  display: grid;
+}
+
+#player_virtual {
+  margin: 0 auto;
 }
 
 div.small {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 div.medium {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .justify {
-    justify-content: center;
-    top: 0; 
-    transition: top 0.2s ease-in-out 0s;
+  justify-content: center;
+  top: 0;
+  transition: top 0.2s ease-in-out 0s;
 }
 
 .flash_error {
-    background-color: var(--color3);
-    text-align: center;
-    padding-top: 10px;
+  background-color: var(--color3);
+  text-align: center;
+  padding-top: 10px;
 }
 
 #error_explanation {
-    background-color: var(--color3);
-    text-align: center;
-    padding-top: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: var(--color3);
+  text-align: center;
+  padding-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #error_explanation ul {
-    background: var(--color3);
-    text-align: center;
-    padding-bottom: 10px;
+  background: var(--color3);
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .field_with_errors {
-    display: inline;
+  display: inline;
 }
 
-.field_with_errors input[type=text] { 
-    display: inline; 
-    border: 5px solid var(--color1);
-    border-radius: 0.5rem;
+.field_with_errors input[type="text"] {
+  display: inline;
+  border: 5px solid var(--color1);
+  border-radius: 0.5rem;
 }
 
 .parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: .5fr repeat(3, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0.5fr repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
 }
-    
-.div1 { grid-area: 1 / 1 / 2 / 6; margin: auto;}
-.div2 { grid-area: 2 / 2 / 3 / 3; margin: auto; top: 0; transition: top 0.2s ease-in-out 0s;}
-.div3 { grid-area: 2 / 3 / 3 / 4; margin: auto; top: 0; transition: top 0.2s ease-in-out 0s;}
-.div4 { grid-area: 2 / 4 / 3 / 5; margin: auto; top: 0; transition: top 0.2s ease-in-out 0s;}
 
-.div2:hover, .div3:hover, .div4:hover, .justify:hover {    
-    top: -3px;
- }
+.div1 {
+  grid-area: 1 / 1 / 2 / 6;
+  margin: auto;
+}
+.div2 {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: auto;
+  top: 0;
+  transition: top 0.2s ease-in-out 0s;
+}
+.div3 {
+  grid-area: 2 / 3 / 3 / 4;
+  margin: auto;
+  top: 0;
+  transition: top 0.2s ease-in-out 0s;
+}
+.div4 {
+  grid-area: 2 / 4 / 3 / 5;
+  margin: auto;
+  top: 0;
+  transition: top 0.2s ease-in-out 0s;
+}
+
+.div2:hover,
+.div3:hover,
+.div4:hover,
+.justify:hover {
+  top: -3px;
+}
 
 .buttonDiv {
-    background-color: var(--color7);
-    border: .0625rem solid #dadce0;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
-    -webkit-border-radius: 0.5rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    background-clip: padding-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    height: 10rem;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    width: 10rem;
-    justify-content: center;
+  background-color: var(--color7);
+  border: 0.0625rem solid #dadce0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-clip: padding-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 10rem;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 10rem;
+  justify-content: center;
 }
 
-input[type=submit] {
-    display: inline-block;
-    color: white;
-    background-color: var(--color7);
-    border: .0625rem solid #dadce0;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
-    -webkit-border-radius: 0.5rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    background-clip: padding-box;
-    height: var(--size4);
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    width: 10rem;
-    justify-content: center;
-    cursor: pointer;
+input[type="submit"] {
+  display: inline-block;
+  color: white;
+  background-color: var(--color7);
+  border: 0.0625rem solid #dadce0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-clip: padding-box;
+  height: var(--size4);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 10rem;
+  justify-content: center;
+  cursor: pointer;
 }
 
 table {
-    margin: auto;
-    font-size: var(--size6);
+  margin: auto;
+  font-size: var(--size6);
 }
 
 ol {
-    display: block;
-    margin: 0;
-    padding: 0;
-    list-style-type: decimal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }
 
 .box {
-    background-clip: padding-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-    margin-right: 1.5rem;
-    overflow: hidden;
-    position: relative;
-    text-align: left;
-    width: 15.75rem;
+  background-clip: padding-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 15.75rem;
 }
 
 .smallBox {
-    background-clip: padding-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    height: 10rem;
-    margin-bottom: 1.5rem;
-    margin-right: 1.5rem;
-    overflow: hidden;
-    position: relative;
-    text-align: left;
-    width: 10rem;
+  background-clip: padding-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 10rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 10rem;
 }
 
 .boxColor {
-    background-color: var(--color7);
-    border: .0625rem solid #dadce0;
-    -webkit-border-radius: 0.5rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
+  background-color: var(--color7);
+  border: 0.0625rem solid #dadce0;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
 }
 
 .flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .boxAlignment {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    padding: 1rem 1rem 0.75rem;
-    position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.75rem;
+  position: relative;
 }
 
-.boxAlignment, .justify, boxColor {
-    justify-content: left;
+.boxAlignment,
+.justify,
+boxColor {
+  justify-content: left;
 }
 
 .smallWhite {
-    font-size: var(--size6);
-    font-weight: 400;
-    line-height: 1.75rem;
-    color: white;
+  font-size: var(--size6);
+  font-weight: 400;
+  line-height: 1.75rem;
+  color: white;
 }
 
 .spacing {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: linear-gradient(0.25turn, var(--color6), var(--color9));
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(0.25turn, var(--color6), var(--color9));
 }
-  
+
 .nav {
-    font-size: 1rem;
-    float: right;
-    transition: 0.5s;
+  font-size: 1rem;
+  float: right;
+  transition: 0.5s;
 }
-  
+
 .nav a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-  
+
 .nav:hover {
-    background-color: var(--color7);
+  background-color: var(--color7);
 }
 
 .noDecoration a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a {
-    text-align: center;
-    justify-items: center;
-    transition: 0.3s;
-
+  text-align: center;
+  justify-items: center;
+  transition: 0.3s;
 }
 
-a:visited{
-    color: white;
+a:visited {
+  color: white;
 }
 
 a:link {
-    color: white;
+  color: white;
 }
 
 a:hover {
-    color: var(--color1);
+  color: var(--color1);
 }
 
 a:active {
-    color: white;
+  color: white;
 }
 
-.div2 a, .div3 a, .div4 a {     
-    text-decoration: none;
+.div2 a,
+.div3 a,
+.div4 a {
+  text-decoration: none;
 }
 
-@media screen and (max-width:811px) {
-    div.div1 h1 {
-        font-size: var(--size2);
-    }
+@media screen and (max-width: 811px) {
+  div.div1 h1 {
+    font-size: var(--size2);
+  }
 
-    .buttonDiv {
-        height: 6rem;
-        width: 6rem;
-    }
+  .buttonDiv {
+    height: 6rem;
+    width: 6rem;
+  }
 
-    .div2 { grid-area: 2 / 3 / 3 / 4; margin: auto;}
-    .div3 { grid-area: 3 / 3 / 4 / 4; margin: auto;}
-    .div4 { grid-area: 4 / 3 / 5 / 4; margin: auto;}
+  .div2 {
+    grid-area: 2 / 3 / 3 / 4;
+    margin: auto;
+  }
+  .div3 {
+    grid-area: 3 / 3 / 4 / 4;
+    margin: auto;
+  }
+  .div4 {
+    grid-area: 4 / 3 / 5 / 4;
+    margin: auto;
+  }
 
-    form {
-        font-size: var(--size6);
-        display: grid;
-    }
+  form {
+    font-size: var(--size6);
+    display: grid;
+  }
 
-    div.div1 div {
-        font-size: var(--size6);
-        display: grid;
-    }
+  div.div1 div {
+    font-size: var(--size6);
+    display: grid;
+  }
 
-    div.div2 {font-size: var(--size6);}
-    div.div3 {font-size: var(--size6);}
-    div.div4 {font-size: var(--size6);}
+  div.div2 {
+    font-size: var(--size6);
+  }
+  div.div3 {
+    font-size: var(--size6);
+  }
+  div.div4 {
+    font-size: var(--size6);
+  }
 
-    #player_virtual {
-        margin: 0 auto;
-    }
+  #player_virtual {
+    margin: 0 auto;
+  }
 }
-
