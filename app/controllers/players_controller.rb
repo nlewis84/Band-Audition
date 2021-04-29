@@ -52,8 +52,9 @@ class PlayersController < ApplicationController
     end
 
     def destroy
+        @audition = Audition.find_by(id: params[:audition_id])
         Player.find(params[:id]).destroy
-        redirect_to user_auditions_path(current_user)
+        redirect_to user_audition_path(current_user, @audition)
     end
 
     private
