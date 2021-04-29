@@ -32,9 +32,11 @@ class PlayersController < ApplicationController
     def edit
         @player = Player.find(params[:id])
         @audition = Audition.find_by(id: params[:audition_id])
+        binding.pry
     end
 
     def update
+        binding.pry
         @player = Player.find(params[:id])
         @audition = Audition.find_by(id: params[:audition_id])
         @player.update(player_params)
