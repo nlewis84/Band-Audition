@@ -4,6 +4,10 @@ class Player < ApplicationRecord
 
   validates :first_name, :last_name, presence: true
 
+  accepts_nested_attributes_for :instrument,
+    allow_destroy: true,
+    :reject_if => proc { |att| att[:name].blank? || att[:available_spots].blank? }
+
   scope :belonging_to_current_audition, -> (audition) { where('audition_id = ?', audition)}
 
   def full_name

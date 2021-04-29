@@ -29,10 +29,12 @@
             <%= f.label :third_choice %>
             <%= f.text_field :third_choice %>
         </div>
+        <%= f.fields_for :instruments do |ai| %>
         <div>
-            <%= f.label :instrument %>
+            <%= f.label :instruments %>
             <%= f.collection_select :instrument, @audition.instruments, :id, :name %>
         </div>
+        <% end %>
         <div>
             <%= f.submit %>
         </div>

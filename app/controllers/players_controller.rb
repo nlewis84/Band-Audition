@@ -32,13 +32,18 @@ class PlayersController < ApplicationController
     def edit
         @player = Player.find(params[:id])
         @audition = Audition.find_by(id: params[:audition_id])
-        binding.pry
     end
 
     def update
         binding.pry
         @player = Player.find(params[:id])
         @audition = Audition.find_by(id: params[:audition_id])
+        
+        # this code should be looked at
+        @instrument = Instrument.find_by(id: params[:player][:instrument])
+        @instrument.players << @player
+        
+        # this code is fine
         @player.update(player_params)
         if @player.save
             redirect_to audition_player_path(@audition, @player)
