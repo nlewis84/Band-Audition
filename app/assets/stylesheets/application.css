@@ -87,6 +87,12 @@ div.small {
 
 div.medium {
   font-size: 1.2rem;
+  display: grid;
+}
+
+form {
+  display: grid;
+  text-align: center;
 }
 
 .center {
@@ -206,6 +212,7 @@ input[type="submit"] {
   width: 100%;
   justify-content: center;
   cursor: pointer;
+  margin: 1rem 0;
 }
 
 table {
@@ -368,6 +375,12 @@ a:active {
   text-decoration: none;
 }
 
+form.new_audition > div {
+  display: grid;
+  width: 100%;
+  text-align: center;
+}
+
 @media screen and (max-width: 811px) {
   div.div1 h1 {
     font-size: var(--size2);
@@ -399,6 +412,7 @@ a:active {
   div.div1 div {
     font-size: var(--size6);
     display: grid;
+    width: 100%;
   }
 
   div.div2 {
