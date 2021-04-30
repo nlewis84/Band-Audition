@@ -32,7 +32,11 @@
 
         <div>
             <%= f.label :instruments %>
+            <% if @player.instrument %>
             <%= f.collection_select :instrument, @audition.instruments, :id, :name, {:selected => @player.instrument.id} %>
+            <% else %>
+            <%= f.collection_select :instrument, @audition.instruments, :id, :name %>
+            <% end %>
         </div>
 
         <div>

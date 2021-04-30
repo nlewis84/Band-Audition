@@ -203,7 +203,7 @@ input[type="submit"] {
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: 10rem;
+  width: 100%;
   justify-content: center;
   cursor: pointer;
 }
