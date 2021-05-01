@@ -19,6 +19,14 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    User.find_by(id: session[:user_id])
+    token = request.headers['token']
+    if token.present?
+      decoded = JWT.decode(token, ENV['JWT_SECRET_KEY'])
+      binding.pry
+      user_id = decoded[0]['id']
+    else
+      user_id = session[:user_id]
+    end
+    User.find_by(id: user_id)
   end
 end

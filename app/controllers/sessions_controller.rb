@@ -17,9 +17,10 @@ class SessionsController < ApplicationController
      
     def create
         @user = User.find_by(username: params[:user][:username])
-        
         if @user.try(:authenticate, params[:user][:password])
-            session[:user_id] = @user.id
+            session[:user_id] = @user.id        
+            token = JWT.encode(JSON.parse(@user.to_json), ENV['JWT_SECRET_KEY'])
+            response.headers['token'] = token
             render json: @user
             # redirect_to user_auditions_path(@user)
         else
