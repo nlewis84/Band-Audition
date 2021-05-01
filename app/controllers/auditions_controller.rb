@@ -7,6 +7,8 @@ class AuditionsController < ApplicationController
         else
             @auditions = Audition.all
         end
+        binding.pry
+        render json: @auditions
     end
 
     # SEARCH FUNCTIONALITY

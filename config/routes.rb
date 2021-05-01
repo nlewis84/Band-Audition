@@ -10,8 +10,12 @@ Rails.application.routes.draw do
   get '/join' => 'auditions#join'
   post '/join' => 'auditions#code'
   get '/auditions/:audition_id/players/total' => 'players#total', as: :total
+
   # get '/search' => 'auditions#search'
 
+  resources :auditions, only: [:index, :show] do
+    
+  end
 
   resources :users, only: [:show] do
     resources :auditions, only: [:show, :index, :create, :edit, :update]

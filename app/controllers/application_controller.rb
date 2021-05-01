@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :null_session 
+  respond_to? :json
   before_action :has_access, :restricted
   helper_method :current_user
 
