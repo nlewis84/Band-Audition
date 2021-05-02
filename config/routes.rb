@@ -13,14 +13,14 @@ Rails.application.routes.draw do
 
   # get '/search' => 'auditions#search'
 
-  # resources :auditions, only: [:index, :show] do
-  # end
+  resources :auditions, only: [:index, :show] do
+  end
 
   resources :users, only: [:show] do
     resources :auditions, only: [:show, :index, :create, :edit, :update]
   end
 
-  resources :auditions, only: [:new, :index, :show] do
+  resources :auditions, only: [:new] do
     resources :players, only: [:new, :create, :show, :edit, :update, :destroy]
     resources :instruments, only: [:edit, :update]
   end 

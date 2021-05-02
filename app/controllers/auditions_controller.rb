@@ -2,6 +2,7 @@ class AuditionsController < ApplicationController
     skip_before_action :restricted
 
     def index
+        binding.pry
         if params[:user_id]
             @auditions = User.find(params[:user_id]).auditions
         else

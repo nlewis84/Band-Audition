@@ -7,7 +7,10 @@ class ApplicationController < ActionController::Base
   private
 
   def has_access
-    redirect_to '/' unless logged_in?
+    # Use this for authorization eventually
+    # redirect_to '/' unless logged_in?
+    render json: { :message => "Unauthorized" }, status: 401 unless logged_in?
+
   end
 
   def restricted
@@ -19,15 +22,16 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    token = request.headers['token']
     binding.pry
+    token = request.headers['token']
     if token.present?
       decoded = JWT.decode(token, ENV['JWT_SECRET_KEY'])
-      binding.pry
-      user_id = decoded[0]['id']
+      # binding.pry
+      user_id = decoded[0]['data']['id']
     else
       user_id = session[:user_id]
     end
+    # binding.pry
     User.find_by(id: user_id)
   end
 end
