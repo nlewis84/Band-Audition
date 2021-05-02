@@ -10,13 +10,11 @@ Welcome to the Band Audition web application! This app was created using Ruby on
 
 If you would like to give this app a try, visit https://band-audition.herokuapp.com/
 
-
-## :loud_sound: Demo 
+## :loud_sound: Demo
 
 - Click the picture below to see a video demo!
 
 [![Band Audition Home Screen](http://img.youtube.com/vi/-bsBpFOtLtg/0.jpg)](http://www.youtube.com/watch?v=-bsBpFOtLtg)
-
 
 ## :trumpet: Installation
 
@@ -27,11 +25,15 @@ If you would like to give this app a try, visit https://band-audition.herokuapp.
 - `cd` into the `Band-Audition` directory
 - Run `bundle install`
 - Run `rake db:create`
-- Run `rake db:migrate` 
+- Run `rake db:migrate`
 - Run `rake db:seed`
 - Run `rails s`
 - Open your browser and navigate to the local url provided by the `rails` server
 - The test login of `nathan:drums` is a great way for you to see some stubbed out functionality
+
+## Postman API Documentation
+
+https://documenter.getpostman.com/view/15612934/TzRLmBC4
 
 ## :musical_keyboard: Contributing
 
