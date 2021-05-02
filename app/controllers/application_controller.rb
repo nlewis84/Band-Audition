@@ -1,16 +1,12 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :null_session 
-  respond_to? :json
+  protect_from_forgery with: :exception
   before_action :has_access, :restricted
   helper_method :current_user
 
   private
 
   def has_access
-    # Use this for authorization eventually
-    # redirect_to '/' unless logged_in?
-    render json: { :message => "Unauthorized" }, status: 401 unless logged_in?
-
+    redirect_to '/' unless logged_in?
   end
 
   def restricted
@@ -22,16 +18,6 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    binding.pry
-    token = request.headers['token']
-    if token.present?
-      decoded = JWT.decode(token, ENV['JWT_SECRET_KEY'])
-      # binding.pry
-      user_id = decoded[0]['data']['id']
-    else
-      user_id = session[:user_id]
-    end
-    # binding.pry
-    User.find_by(id: user_id)
+    User.find_by(id: session[:user_id])
   end
 end

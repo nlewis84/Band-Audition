@@ -17,14 +17,10 @@ class SessionsController < ApplicationController
      
     def create
         @user = User.find_by(username: params[:user][:username])
+        
         if @user.try(:authenticate, params[:user][:password])
-            session[:user_id] = @user.id        
-            exp = Time.now.to_i + 3600
-            exp_payload = { :data => JSON.parse(@user.to_json), :exp => exp }
-            token = JWT.encode(exp_payload, ENV['JWT_SECRET_KEY'])
-            response.headers['token'] = token
-            render json: @user
-            # redirect_to user_auditions_path(@user)
+            session[:user_id] = @user.id
+            redirect_to user_auditions_path(@user)
         else
             flash[:error] = "Sorry, login info was incorrect. Please try again."
             redirect_to login_path
