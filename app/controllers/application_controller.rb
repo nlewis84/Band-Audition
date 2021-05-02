@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  include ExceptionHandler
   protect_from_forgery with: :null_session 
   respond_to? :json
   before_action :has_access, :restricted
@@ -21,6 +20,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     token = request.headers['token']
+    binding.pry
     if token.present?
       decoded = JWT.decode(token, ENV['JWT_SECRET_KEY'])
       binding.pry
