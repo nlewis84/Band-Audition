@@ -10,10 +10,13 @@ Rails.application.routes.draw do
   get '/join' => 'auditions#join'
   post '/join' => 'auditions#code'
   get '/auditions/:audition_id/players/total' => 'players#total', as: :total
+
   # get '/search' => 'auditions#search'
 
+  resources :auditions, only: [:index, :show] do
+  end
 
-  resources :users, only: [:show] do
+  resources :users, only: [:index, :show] do
     resources :auditions, only: [:show, :index, :create, :edit, :update]
   end
 
@@ -21,6 +24,24 @@ Rails.application.routes.draw do
     resources :players, only: [:new, :create, :show, :edit, :update, :destroy]
     resources :instruments, only: [:edit, :update]
   end 
+
+  namespace 'api' do
+    namespace 'v1' do
+      post '/login' => 'sessions#create'
+      get '/auditions/:audition_id/players/total' => 'players#total', as: :total
+
+      resources :auditions, only: [:index, :show] do
+      end
+
+      resources :users, only: [:index, :show] do
+        resources :auditions, only: [:show, :index]
+      end
+
+      resources :auditions, only: [:new] do
+        resources :players, only: [:show]
+      end 
+    end
+  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
